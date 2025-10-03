@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbooking - Әуебилеттерді брондау</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>✈️ Airbooking</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Басты бет</a></li>
+                <li><a href="#flights">Рейстер</a></li>
+                <li><a href="#about">Біз туралы</a></li>
+                <li><a href="#contact">Байланыс</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Бас бөлім -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Қазақстан және әлем бойынша әуебилеттер</h1>
+            <p>Ең үздік бағалармен рейстерді іздеу және брондау</p>
+            
+            <!-- Іздеу формасы -->
+            <div class="search-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Қайдан</label>
+                        <select id="from">
+                            <option value="">Қала таңдаңыз</option>
+                            <option value="ALA">Алматы (ALA)</option>
+                            <option value="NQZ">Нұр-Сұлтан (NQZ)</option>
+                            <option value="CIT">Шымкент (CIT)</option>
+                            <option value="GUW">Атырау (GUW)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Қайда</label>
+                        <select id="to">
+                            <option value="">Қала таңдаңыз</option>
+                            <option value="IST">Стамбул (IST)</option>
+                            <option value="DXB">Дубай (DXB)</option>
+                            <option value="MOW">Мәскеу (MOW)</option>
+                            <option value="ALA">Алматы (ALA)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Кету күні</label>
+                        <input type="date" id="departure">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Қайту күні</label>
+                        <input type="date" id="return">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Жолаушылар</label>
+                        <select id="passengers">
+                            <option value="1">1 жолаушы</option>
+                            <option value="2">2 жолаушы</option>
+                            <option value="3">3 жолаушы</option>
+                            <option value="4">4 жолаушы</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="search-btn" onclick="searchFlights()">Рейстерді іздеу</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Тақырыптық бағыттар -->
+    <section class="popular-routes">
+        <h2>Танымал бағыттар</h2>
+        <div class="routes-grid">
+            <div class="route-card">
+                <h3>Алматы → Стамбул</h3>
+                <p>Бағасы: 150,000 ₸ бастап</p>
+            </div>
+            <div class="route-card">
+                <h3>Нұр-Сұлтан → Дубай</h3>
+                <p>Бағасы: 200,000 ₸ бастап</p>
+            </div>
+            <div class="route-card">
+                <h3>Шымкент → Мәскеу</h3>
+                <p>Бағасы: 120,000 ₸ бастап</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Артықшылықтар -->
+    <section class="features">
+        <h2>Неге бізді таңдайсыз?</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <h3>🚀 Жылдам брондау</h3>
+                <p>Бірнеше минут ішінде билетті брондаңыз</p>
+            </div>
+            <div class="feature">
+                <h3>💳 Қауіпсіз төлем</h3>
+                <p>Төлемдеріңіз толық қауіпсіз</p>
+            </div>
+            <div class="feature">
+                <h3>📱 Ыңғайлы интерфейс</h3>
+                <p>Барлық құрылғыларда жұмыс істейді</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Airbooking. Барлық құқықтар қорғалған.</p>
+            <p>📞 Байланыс: +7 (777) 123-45-67</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
