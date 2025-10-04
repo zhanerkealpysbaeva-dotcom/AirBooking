@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тіркелу - AirBooking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="index.html" style="text-decoration: none; color: inherit;">✈️ AirBooking</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Басты бет</a></li>
+                <li><a href="login.html">Кіру</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-card">
+                <h2>Жаңа аккаунт тіркеу</h2>
+                <form id="registerForm" class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Аты</label>
+                            <input type="text" id="firstName" required placeholder="Атыңыз">
+                        </div>
+                        <div class="form-group">
+                            <label>Тегі</label>
+                            <input type="text" id="lastName" required placeholder="Тегіңіз">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="registerEmail" required placeholder="email@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Құпия сөз</label>
+                        <input type="password" id="registerPassword" required placeholder="Кемінде 6 таңба">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Құпия сөзді қайталаңыз</label>
+                        <input type="password" id="confirmPassword" required placeholder="Құпия сөзді қайта енгізіңіз">
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <label for="agreeTerms">Мен <a href="#">пайдалану шарттарымен</a> келісемін</label>
+                    </div>
+
+                    <button type="submit" class="auth-btn">Тіркелу</button>
+                </form>
+
+                <div class="auth-links">
+                    <p>Аккаунтыңыз бар ма? <a href="login.html">Кіру</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="auth.js"></script>
+</body>
+</html>
