@@ -1,7 +1,6 @@
 # AirBooking
-# ✈️ AirBooking
 
-## 🧩 ER Diagram — AirBooking System
+## ER Diagram — AirBooking System
 
 ```mermaid
 erDiagram
