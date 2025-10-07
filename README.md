@@ -1,5 +1,7 @@
 # AirBooking
-## ✈️ ER Diagram — AirBooking System
+# ✈️ AirBooking
+
+## 🧩 ER Diagram — AirBooking System
 
 ```mermaid
 erDiagram
@@ -16,45 +18,28 @@ erDiagram
         string flight_number
         string departure_city
         string arrival_city
-        datetime departure_time
-        datetime arrival_time
-        int available_seats
+        date departure_date
+        date arrival_date
         float price
     }
 
     BOOKINGS {
         int booking_id
-        datetime booking_date
-        string status
         int user_id
         int flight_id
+        date booking_date
+        string status
     }
 
     PAYMENTS {
         int payment_id
-        datetime payment_date
+        int booking_id
         float amount
         string payment_method
-        int booking_id
+        date payment_date
     }
 
-    AIRLINES {
-        int airline_id
-        string name
-        string code
-        string country
-    }
-
-    PLANES {
-        int plane_id
-        string model
-        int capacity
-        int airline_id
-    }
-
-    ## Relationships
-    AIRLINES ||--o{ PLANES : owns
-    PLANES ||--o{ FLIGHTS : operates
-    USERS ||--o{ BOOKINGS : makes
-    FLIGHTS ||--o{ BOOKINGS : has
-    BOOKINGS ||--o{ PAYMENTS : includes
+    USERS ||--o{ BOOKINGS : "makes"
+    FLIGHTS ||--o{ BOOKINGS : "is booked in"
+    BOOKINGS ||--o{ PAYMENTS : "has"
+```
